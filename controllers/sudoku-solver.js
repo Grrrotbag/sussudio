@@ -1,10 +1,7 @@
-const regex = /[^1-9.]/;
-
 const gridMaker = (puzzleString) => {
   // DONE: turn string into array of arrays
   // each array should be length 9
   let puzzleArr = puzzleString.split("");
-  // console.log(puzzleArr);
   let grid = [];
   for (let i = 0; i < 9; i++) {
     var arr = [];
@@ -21,6 +18,8 @@ class SudokuSolver {
     // DONE: The validate function should take a given puzzle
     // string and check it to see if it has 81 valid characters
     // for the input.
+    const regex = /[^1-9.]/;
+
     if (puzzleString.length < 81) return false;
     if (puzzleString.match(regex)) return false;
 
@@ -45,7 +44,6 @@ class SudokuSolver {
     // 1. check if the location is a .
     // 2. check if column contains value
     let grid = gridMaker(puzzleString);
-    // console.table(grid);
     if (!grid[row][column] === ".") return false;
     let col = grid.map((val, idx) => val[column]);
 
@@ -60,7 +58,6 @@ class SudokuSolver {
     // 2. check if region contains value
     // NOTE: regions are [0,1,2], [3,4,5], [6,7,8]
     let grid = gridMaker(puzzleString);
-    // console.table(grid);
     let x = Math.floor(column / 3) * 3;
     let y = Math.floor(row / 3) * 3;
 
@@ -80,20 +77,14 @@ class SudokuSolver {
 
     let grid = gridMaker(puzzleString);
 
-    // console.table(grid);
-
     if (puzzleString.match(/[.]/)) {
-      console.log("incomplete puzzle detected");
-
       let newString = solver(grid);
-      // console.table(newString);
       return newString;
     }
 
     // DONE: check all rows equal 45
     for (let row = 0; row < 9; row++) {
       let rowTotal = eval(grid[row].join("+"));
-      // console.log("row total: ", rowTotal);
       if (rowTotal != 45) return false;
     }
 
@@ -101,7 +92,6 @@ class SudokuSolver {
     for (let col = 0; col < 9; col++) {
       var column = grid.map((val, idx) => val[col]);
       let colTotal = eval(column.join("+"));
-      // console.log("col total: ", colTotal);
       if (colTotal != 45) return false;
     }
 
@@ -119,7 +109,6 @@ class SudokuSolver {
 
     for (let region = 0; region < 9; region++) {
       let regTotal = eval(squares[region].join("+"));
-      // console.log("reg total: ", regTotal);
       if (regTotal != 45) return false;
     }
 
