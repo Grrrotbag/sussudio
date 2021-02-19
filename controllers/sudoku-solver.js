@@ -119,9 +119,9 @@ class SudokuSolver {
 // https://stackoverflow.com/questions/42736648/sudoku-solver-in-js/42736701#42736701
 function isValid(grid, row, col, val) {
   for (let i = 0; i < 9; i++) {
-    const m = 3 * Math.floor(row / 3) + Math.floor(i / 3);
-    const n = 3 * Math.floor(col / 3) + (i % 3);
-    if (grid[row][i] == val || grid[i][col] == val || grid[m][n] == val) {
+    const x = 3 * Math.floor(row / 3) + Math.floor(i / 3);
+    const y = 3 * Math.floor(col / 3) + (i % 3);
+    if (grid[row][i] == val || grid[i][col] == val || grid[x][y] == val) {
       return false;
     }
   }
