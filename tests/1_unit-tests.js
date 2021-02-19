@@ -3,6 +3,7 @@ const assert = chai.assert;
 
 const Solver = require("../controllers/sudoku-solver.js");
 let solver = new Solver();
+// DONE: All 12 unit tests are complete and passing. See /tests/1_unit-tests.js for the expected behavior you should write tests for.
 
 suite("UnitTests", () => {
   // DONE: Logic handles a valid puzzle string of 81 characters
