@@ -187,10 +187,12 @@ td {
 @media (min-width: 800px) {
   .container {
     flex-direction: row;
+    justify-content: center;
   }
 
   .form-container {
     align-self: center;
+    width: 20%;
   }
   #sudoku-grid-container {
     margin-left: 20px;
