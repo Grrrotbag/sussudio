@@ -1,3 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Rock+Salt&display=swap");
+:root {
+  --display-font: "Rock Salt", cursive;
+  --sans-font: "Inter", sans-serif;
+  --background-color: #eaf2e3;
+  --green: #84b082;
+}
+
+body {
+  font-family: var(--sans-font);
+}
+
+header {
+  font-family: var(--display-font);
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--green);
+}
+
+#solve-button,
+#check-button {
+  font-family: var(--sans-font);
+  /* font-size: 0.6em; */
+  padding: 15px 22px;
+  border: none;
+  background-color: var(--green);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+}
+
+#check-form {
+  display: block;
+  margin-top: 2rem;
+}
+
+#check-button {
+  margin-top: 1rem;
+}
+
+.left {
+  float: left;
+}
+
+.left2 {
+  overflow: hidden;
+  display: block;
+  padding: 0 4px 0 10px;
+}
+.left2 input {
+  width: 95%;
+  padding: 5px;
+}
+
 code {
   background: #d0d0d5;
 }
@@ -16,9 +73,9 @@ textarea {
   width: 100%;
 }
 
-#user-stories {
+/* #user-stories {
   font-size: 1.2em;
-}
+} */
 
 #error-msg {
   color: red;
@@ -29,7 +86,7 @@ textarea {
 #sudoku-grid-container {
   display: flex;
   flex-direction: row;
-  margin-left: 20px;
+  margin-left: -20px;
 }
 
 #sudoku-grid {
@@ -54,19 +111,19 @@ td {
 }
 
 .yAxisLegend tr td {
-  border: 1px solid rgba(0,0,0,0);
+  border: 1px solid rgba(0, 0, 0, 0);
   width: 2em;
   height: 1.95em;
 }
 
 .xAxisLegend {
-  border: 3px solid rgba(0,0,0,0);
+  border: 3px solid rgba(0, 0, 0, 0);
   border-spacing: 0;
   font-weight: bold;
 }
 
 .xAxisLegend tr td {
-  border: 1px solid rgba(0,0,0,0);
+  border: 1px solid rgba(0, 0, 0, 0);
   width: 2em;
   height: 2em;
   text-align: center;
@@ -75,7 +132,7 @@ td {
 }
 
 .xAxisLegend tr td:nth-of-type(3n) {
-  border-right: 3px solid rgba(0,0,0,0);
+  border-right: 3px solid rgba(0, 0, 0, 0);
 }
 
 .sudoku-input {
@@ -85,11 +142,45 @@ td {
   text-align: center;
 }
 
-.C1, .C2, .C3, .C4, .C5, .C6, .C7, .C8, .C9, .F1, .F2, .F3, .F4, .F5, .F6, .F7, .F8, .F9 {
+.C1,
+.C2,
+.C3,
+.C4,
+.C5,
+.C6,
+.C7,
+.C8,
+.C9,
+.F1,
+.F2,
+.F3,
+.F4,
+.F5,
+.F6,
+.F7,
+.F8,
+.F9 {
   border-bottom: 3px solid;
 }
 
-.A3, .B3, .C3, .D3, .E3, .F3, .G3, .H3, .I3, .A6, .B6, .C6, .D6, .E6, .F6, .G6, .H6, .I6 {
+.A3,
+.B3,
+.C3,
+.D3,
+.E3,
+.F3,
+.G3,
+.H3,
+.I3,
+.A6,
+.B6,
+.C6,
+.D6,
+.E6,
+.F6,
+.G6,
+.H6,
+.I6 {
   border-right: 3px solid;
 }
 
@@ -100,5 +191,8 @@ td {
 
   .form-container {
     align-self: center;
+  }
+  #sudoku-grid-container {
+    margin-left: 20px;
   }
 }
